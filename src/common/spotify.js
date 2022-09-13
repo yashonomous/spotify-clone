@@ -3,7 +3,9 @@ import { spotifyApiUrls } from "./spotifyApiUrls";
 
 const AUTH_END_POINT = "https://accounts.spotify.com/authorize";
 const CLIENT_ID = "95489178da834723aa6e73e2eedd6783";
-const REDIRECT_URI = "http://localhost:3000/";
+const REDIRECT_URI_LOCAL = "http://localhost:3000/";
+const REDIRECT_URI = "https://spotify-clone-44382.web.app/";
+
 const SCOPES = [
   "user-read-currently-playing",
   "user-read-recently-played",
