@@ -108,7 +108,7 @@ function AlbumTracks() {
 
                 {location.pathname.includes("playlist") && (
                   <div className="text-[#9D9E9D] text-sm ml-auto ">
-                    <p>{track.track?.album?.name}</p>
+                    <p>{shorten(track.track?.album?.name)}</p>
                   </div>
                 )}
 

@@ -5,16 +5,33 @@ import {
   ArrowForwardIosOutlined,
   PersonOutlineOutlined,
 } from "@material-ui/icons";
-import { Button } from "@material-ui/core";
+import { Button, IconButton } from "@material-ui/core";
 import { useStateValue } from "../common/StateProvider";
+import { useNavigate } from "react-router";
 
 function MusicArtsHeader() {
   const [{ currentUserProfile }] = useStateValue();
+  const navigate = useNavigate();
   return (
     <div className="flex justify-between items-center p-4 gap-4 ">
       <div className="flex gap-4  ">
-        <ArrowBackIosRounded className="border rounded-[50%] bg-black  border-white border-solid w-8 h-8 p-1 " />
-        <ArrowForwardIosOutlined className="border rounded-[50%] bg-black  border-white border-solid w-8 h-8 p-1" />
+        <IconButton
+          className="border rounded-[50%] border-white border-solid w-8 h-8 p-1 "
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          {" "}
+          <ArrowBackIosRounded className=" text-white" />
+        </IconButton>
+        <IconButton
+          className="border rounded-[50%] border-white border-solid w-8 h-8 p-1"
+          onClick={() => {
+            navigate(1);
+          }}
+        >
+          <ArrowForwardIosOutlined className=" text-white" />
+        </IconButton>
       </div>
 
       <div className="flex-1"></div>

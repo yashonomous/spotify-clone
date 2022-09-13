@@ -19,7 +19,7 @@ const SCOPES = [
 export const LOGIN_URL = `${encodeURI(
   AUTH_END_POINT
 )}?client_id=${CLIENT_ID}&redirect_uri=${encodeURI(
-  REDIRECT_URI
+  REDIRECT_URI_LOCAL
 )}&scope=${encodeURI(SCOPES.join(" "))}&response_type=token&show_dialog=true`;
 
 export const getHeadersFromUrl = (url) => {
